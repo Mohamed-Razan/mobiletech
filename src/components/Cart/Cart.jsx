@@ -20,9 +20,9 @@ const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
 
   const renderCart = () => (
     <>
-      <Grid container spacing={3}>
+      <Grid container spacing={3} justify='center'>
         {cart.line_items.map((lineItem) => (
-          <Grid item xs={12} sm={4} lg={3} key={lineItem.id}>
+          <Grid item xs={9} sm={6} md={4} lg={3} key={lineItem.id}>
             <CartItem item={lineItem} onUpdateCartQty={onUpdateCartQty} onRemoveFromCart={onRemoveFromCart} />
           </Grid>
         ))}
